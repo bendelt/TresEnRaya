@@ -38,11 +38,34 @@ private static final char charUsuario='x', charMaquina='o';
         }while (opcion!=0);
         input.close();
     }
-}
+
 
 private static void numerarTablero(){
     for (int i=0; i<9; i++) {
-        tablero[i]=integer.toString(i+1).charAt(0);
+        tablero[i]=Integer.toString(i+1).charAt(0);
     }
+}
 
+private static void vaciarTablero(){
+        for (int i=0; i<9; i++) {
+            tablero[i]=' ';
+        }
+    }
+private static void mostrarablero(){
+    for (int i=0; i<7; i++){
+Switch (i)  {
+            case 0,2,4,6:
+                System.out.println("-------");
+                break;
+            case 1:
+                System.out.println(" |"+tablero[0]+" | "+tablero[1]+" | "+tablero[2]+" |");
+                break;
+            case 3:
+                System.out.println(" |"+tablero[3]+" | "+tablero[4]+" | "+tablero[5]+" |");
+                break;
+            case 5:
+                System.out.println(" |"+tablero[6]+" | "+tablero[7]+" | "+tablero[8]+" |");
+                break;
+        }
+    }
 }
