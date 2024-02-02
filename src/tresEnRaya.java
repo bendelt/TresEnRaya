@@ -186,6 +186,43 @@ private static void ocuparCasilla() {
         }
     }
 }
-    private static char victoria
+    private static char victoria(){
+            int i=0;
+    char r='';
+    do{
+        if (charUsuario==tablero[3+i] && charUsuario==tablero[(3+i)+1] && charUsuario==tablero[(3+i)+2]){
+            r=charUsuario;
+        }
 
+        if (charUsuario==tablero[i] && charUsuario==tablero[3+i] && charUsuario==tablero[6+i]){
+            r=charUsuario;
+        }
+
+        if (charUsuario==tablero[0] && charUsuario==tablero[4] && charUsuario==tablero[8]){
+            r=charUsuario;
+        }
+
+        if (charUsuario==tablero[2] && charUsuario==tablero[4] && charUsuario==tablero[6]){
+            r=charUsuario;
+        }
+
+        if (charMaquina==tablero[3+i] && charMaquina==tablero[(3+i)+1] && charMaquina==tablero[(3+i)+2]){
+            r=charMaquina;
+        }
+
+        if (charMaquina==tablero[i] && charMaquina==tablero[3+i] && charMaquina==tablero[6+i]){
+            r=char;
+        }
+
+        if (charMaquina==tablero[0] && charMaquina==tablero[4] && charMaquina==tablero[8]){
+            r=charMaquina;
+        }
+
+        if (charMaquina==tablero[2] && charMaquina==tablero[4] && charMaquina==tablero[6]){
+            r=charMaquina;
+        }
+        i++;
+    } while (r==' ' && i<3);
+    return r;
+}
 
